@@ -1,55 +1,29 @@
-/* ================================
-   Global layout fixes
-   ================================ */
-
 /* Push content below the fixed navbar */
-body {
-  padding-top: 95px;   /* desktop navbar height */
+body { padding-top: 95px; }
+@media (max-width: 992px) { body { padding-top: 110px; } }
+
+/* Typography / spacing */
+.hero { padding: 22px 0; }
+.section-title { margin-top: 0; font-weight: 700; }
+
+/* Profile image */
+.profile-pic { max-width: 190px; border-radius: 16px; }
+
+/* Colorful card styling (still professional) */
+.hero-card,
+.cardish {
+  padding: 18px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, rgba(13,110,253,0.10), rgba(32,201,151,0.10));
 }
 
-/* Navbar is taller on smaller screens */
-@media (max-width: 992px) {
-  body {
-    padding-top: 110px;
-  }
+/* Make About/Education slightly different tint */
+.cardish {
+  background: linear-gradient(135deg, rgba(32,201,151,0.10), rgba(255,193,7,0.10));
 }
 
-/* ================================
-   Hero section
-   ================================ */
-
-.hero {
-  padding: 20px 0;
-}
-
-/* Remove extra top margin from name */
-.hero h2 {
-  margin-top: 0;
-}
-
-/* Profile image styling */
-.profile-pic {
-  max-width: 190px;
-  border-radius: 12px;
-}
-
-/* ================================
-   Section styling
-   ================================ */
-
-.section-title {
-  margin-top: 18px;
-  font-weight: 600;
-}
-
-/* ================================
-   Link styling
-   ================================ */
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
+/* Links */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
