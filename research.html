@@ -5,16 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Research | Shreyas Harish</title>
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- small page-specific tweaks (keeps everything stacked + readable) -->
   <style>
-    .stack { display: grid; gap: 16px; }
-    .section-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 16px; }
-    .section-title2 { margin: 0 0 6px; font-size: 1.25rem; font-weight: 900; }
-    .section-sub { margin: 0 0 12px; color: rgba(255,255,255,0.72); font-weight: 600; }
-    .img-full { width: 100%; max-height: 420px; object-fit: contain; border-radius: 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10); }
-    .tight { margin-top: 10px; }
-    .tools-row { display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px; }
+    .stack { display:grid; gap:16px; }
+    .click-card{
+      display:block;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 20px;
+      padding: 18px;
+      text-decoration:none;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .click-card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(142,240,201,0.55);
+      background: rgba(255,255,255,0.08);
+      text-decoration:none;
+    }
+    .card-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+    .card-title{ margin:0; font-size:1.35rem; font-weight:900; }
+    .card-sub{ margin:6px 0 0; color: rgba(255,255,255,0.72); font-weight:600; }
+    .arrow{
+      min-width:38px; height:38px; display:grid; place-items:center;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      font-weight:900;
+    }
+    .thumb{
+      width:100%;
+      max-height: 260px;
+      object-fit: contain;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      margin-top: 12px;
+    }
+    .tags{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px; }
+    .mini{ margin-top:10px; color: rgba(255,255,255,0.84); line-height:1.6; }
+    .pub-box{
+      background: rgba(255,255,255,0.04);
+      border: 1px dashed rgba(255,255,255,0.18);
+      border-radius: 18px;
+      padding: 16px;
+      color: rgba(255,255,255,0.82);
+    }
   </style>
 </head>
 
@@ -29,104 +64,89 @@
         <a class="nav-link" href="projects.html">Projects</a>
         <a class="nav-link" href="teaching.html">Teaching</a>
       </nav>
-      <div class="top-actions">
-        <button class="icon-btn" title="Theme" aria-label="Theme">☾</button>
-      </div>
+      <div class="top-actions"><button class="icon-btn" aria-label="Theme">☾</button></div>
     </div>
   </header>
 
   <main class="hero-bg">
     <div class="container">
 
-      <!-- PAGE HEADER -->
       <section class="about-card">
         <h2 class="heading">Research</h2>
         <p class="about-text">
-          I am an <strong>undergraduate researcher</strong> interested in how semiconductor materials, interfaces,
-          and device structures translate into measurable electrical/optical behavior. My work includes
-          <strong>TCAD simulation workflows</strong> (Synopsys Sentaurus SDE/SDEVICE), post-processing with
-          <strong>Sentaurus Visual</strong>, analysis with <strong>Python</strong>, and lab-based data visualization
-          using <strong>LabVIEW</strong>.
+          I’m an <strong>undergraduate researcher</strong> working on two areas:
+          <strong>(1) Semiconductor device simulation & characterization</strong> and
+          <strong>(2) Geospatial accuracy optimization for GCP planning</strong>.
+          Click a project below to view details.
         </p>
 
-        <div class="tools-row">
-          <span class="btn btn-ghost">Sentaurus SDE</span>
-          <span class="btn btn-ghost">Sentaurus Device</span>
-          <span class="btn btn-ghost">Sentaurus Visual</span>
+        <div class="tags">
+          <span class="btn btn-ghost">Sentaurus</span>
           <span class="btn btn-ghost">Python</span>
           <span class="btn btn-ghost">LabVIEW</span>
-          <span class="btn btn-ghost">I–V / C–V</span>
-          <span class="btn btn-ghost">Optics / EQE</span>
+          <span class="btn btn-ghost">ArcGIS</span>
+          <span class="btn btn-ghost">GDOP</span>
         </div>
       </section>
 
-      <!-- STACKED SECTIONS -->
       <section class="about-card" style="margin-top:16px;">
-        <h3 class="mini-title" style="margin:0 0 8px;">Semiconductor Device Simulation & Characterization (TCAD)</h3>
-        <p class="small-muted" style="margin:0 0 12px;">
-          One research theme, organized into clear sub-areas below.
-        </p>
-
         <div class="stack">
 
-          <!-- MQW -->
-          <div class="section-card">
-            <h4 class="section-title2">Multi-Quantum Well (MQW) TCAD Setup</h4>
-            <p class="section-sub">Sentaurus SDE + Sentaurus Device</p>
+          <!-- CARD 1: Semiconductor -->
+          <a class="click-card" href="research-semiconductor.html">
+            <div class="card-top">
+              <div>
+                <h3 class="card-title">Semiconductor Device Simulation & Characterization (TCAD)</h3>
+                <p class="card-sub">Synopsys Sentaurus · Sentaurus Visual · Python · LabVIEW</p>
+              </div>
+              <div class="arrow">→</div>
+            </div>
 
-            <img class="img-full" src="assets/img/mqw.jpg" alt="MQW TCAD"
-                 onerror="this.style.display='none'">
+            <p class="mini">
+              Built TCAD workflows for MQW structures, photodetector optics/EQE, and bandgap model studies.
+              Post-processed outputs into clean plots and analysis.
+            </p>
 
-            <ul class="list tight">
-              <li>Built layered well/barrier geometries using <strong>Sentaurus SDE</strong>.</li>
-              <li>Enabled <strong>HeteroInterface</strong> / <strong>QuantumWell</strong> models in <strong>SDEVICE</strong>.</li>
-              <li>Analyzed band edges, carrier density, and electric-field trends across interfaces.</li>
-            </ul>
-          </div>
+            <img class="thumb" src="assets/img/mqw.jpg" alt="TCAD preview" onerror="this.style.display='none'">
 
-          <!-- Photodetector EQE -->
-          <div class="section-card">
-            <h4 class="section-title2">Photodetector Simulation (Optics + EQE)</h4>
-            <p class="section-sub">OpticalGeneration · RayTraceBC · Post-processing</p>
+            <div class="tags">
+              <span class="btn btn-ghost">MQW</span>
+              <span class="btn btn-ghost">Optics / EQE</span>
+              <span class="btn btn-ghost">I–V / C–V</span>
+              <span class="btn btn-ghost">Band Diagrams</span>
+            </div>
+          </a>
 
-            <img class="img-full" src="assets/img/eqe.jpg" alt="Photodetector EQE"
-                 onerror="this.style.display='none'">
+          <!-- CARD 2: GCP / GDOP -->
+          <a class="click-card" href="research-gcp.html">
+            <div class="card-top">
+              <div>
+                <h3 class="card-title">GCP Planning & GDOP-Based Accuracy Optimization</h3>
+                <p class="card-sub">ArcGIS-ready outputs · Modeling · Optimization</p>
+              </div>
+              <div class="arrow">→</div>
+            </div>
 
-            <ul class="list tight">
-              <li>Configured <strong>OpticalGeneration</strong> and wavelength sweeps in Sentaurus Device.</li>
-              <li>Applied <strong>RayTraceBC</strong> boundary conditions for reflectance/absorption effects.</li>
-              <li>Used <strong>Sentaurus Visual</strong> to compute/visualize <strong>QE</strong> and responsivity trends.</li>
-            </ul>
-          </div>
+            <p class="mini">
+              Developed a predictive tool to optimize Ground Control Point (GCP) placement/quantity using
+              GDOP-based accuracy modeling, generating KML/shapefiles for survey planning.
+            </p>
 
-          <!-- Bandgap -->
-          <div class="section-card">
-            <h4 class="section-title2">Bandgap / Model Parameter Studies (I–V)</h4>
-            <p class="section-sub">Device physics exploration + I–V analysis</p>
+            <img class="thumb" src="assets/img/gcp.jpg" alt="GCP preview" onerror="this.style.display='none'">
 
-            <img class="img-full" src="assets/img/bandgap.jpg" alt="Bandgap / I-V"
-                 onerror="this.style.display='none'">
+            <div class="tags">
+              <span class="btn btn-ghost">GDOP</span>
+              <span class="btn btn-ghost">ArcGIS</span>
+              <span class="btn btn-ghost">Survey Planning</span>
+              <span class="btn btn-ghost">KML/Shapefiles</span>
+            </div>
+          </a>
 
-            <ul class="list tight">
-              <li>Configured bandgap and recombination-related parameters in <strong>Sentaurus Device</strong>.</li>
-              <li>Solved coupled Poisson and carrier transport equations for steady-state response.</li>
-              <li>Generated and analyzed <strong>I–V characteristics</strong> using <strong>Sentaurus Visual</strong>.</li>
-            </ul>
-          </div>
-
-          <!-- Visualization -->
-          <div class="section-card">
-            <h4 class="section-title2">Visualization & LabVIEW</h4>
-            <p class="section-sub">Clear plots + reproducible analysis</p>
-
-            <ul class="list">
-              <li>Extracted cutlines/band diagrams and key device variables using <strong>Sentaurus Visual</strong>.</li>
-              <li>Processed exported data with <strong>Python</strong> (Pandas/Matplotlib) for clean plots.</li>
-              <li>Used <strong>LabVIEW</strong> for data visualization/analysis workflows supporting interpretation of datasets.</li>
-            </ul>
-
-            <div style="margin-top:12px;">
-              <span class="btn btn-ghost">Undergrad focus: learn → simulate → analyze → communicate</span>
+          <!-- Publications placeholder -->
+          <div class="pub-box">
+            <strong>Publications (Coming Soon)</strong>
+            <div style="margin-top:6px;">
+              I will add my publication here once it is confirmed (title, venue, PDF link).
             </div>
           </div>
 
