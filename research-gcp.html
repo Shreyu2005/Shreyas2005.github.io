@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Research | GCP Optimization</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .stack { display:grid; gap:16px; }
+    .section-card{ background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:18px; padding:16px; }
+    .img-full{ width:100%; max-height:420px; object-fit:contain; border-radius:14px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.10); margin-top:10px; }
+    .sub{ color: rgba(255,255,255,0.72); font-weight:600; margin:0 0 10px; }
+    .title2{ margin:0 0 6px; font-size:1.25rem; font-weight:900; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Shreyas Harish</a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Bio</a>
+        <a class="nav-link active" href="research.html">Research</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="teaching.html">Teaching</a>
+      </nav>
+      <div class="top-actions"><button class="icon-btn" aria-label="Theme">☾</button></div>
+    </div>
+  </header>
+
+  <main class="hero-bg">
+    <div class="container">
+
+      <section class="about-card">
+        <h2 class="heading">GCP Planning & GDOP-Based Accuracy Optimization</h2>
+        <p class="about-text">
+          Undergraduate research focused on reducing field effort while maintaining mapping accuracy by
+          optimizing <strong>Ground Control Point (GCP)</strong> placement/quantity using <strong>GDOP-based</strong>
+          modeling and ArcGIS-ready outputs.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-ghost" href="research.html">← Back to Research Overview</a>
+        </div>
+      </section>
+
+      <section class="about-card" style="margin-top:16px;">
+        <div class="stack">
+
+          <div class="section-card">
+            <h3 class="title2">Goal</h3>
+            <p class="sub">Reduce survey workload while keeping accuracy high</p>
+            <ul class="list">
+              <li>Optimize how many GCPs are needed and where they should be placed.</li>
+              <li>Use GDOP-style modeling to predict measurement geometry quality and expected accuracy.</li>
+              <li>Deliver outputs that teams can use directly in GIS tools for planning and field execution.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3 class="title2">Approach</h3>
+            <p class="sub">Modeling + optimization + GIS deliverables</p>
+            <img class="img-full" src="assets/img/gcp.jpg" alt="GCP Preview" onerror="this.style.display='none'">
+            <ul class="list" style="margin-top:10px;">
+              <li>Built a predictive workflow to evaluate candidate GCP layouts and their expected impact on accuracy.</li>
+              <li>Integrated terrain/mission constraints to keep recommended placements realistic.</li>
+              <li>Generated ArcGIS-compatible deliverables: <strong>KML</strong>, <strong>shapefiles</strong>, and feature layers.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3 class="title2">Outcome</h3>
+            <p class="sub">Clear, field-usable recommendations</p>
+            <ul class="list">
+              <li>Provided an optimization-based method for selecting efficient GCP placements.</li>
+              <li>Helped reduce required field effort while protecting accuracy targets.</li>
+              <li>Structured the results for easy usage in mapping/survey workflows.</li>
+            </ul>
+
+            <div style="margin-top:12px;">
+              <span class="btn btn-ghost">Publication link will be added here once confirmed.</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="footer">© <span id="year"></span> Shreyas Harish</footer>
+    </div>
+  </main>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
